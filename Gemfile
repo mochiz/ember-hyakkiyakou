@@ -12,3 +12,4 @@ gem 'spring',        group: :development
 
 # ember
 gem 'ember-rails'
+gem 'rails_12factor', group: :production
