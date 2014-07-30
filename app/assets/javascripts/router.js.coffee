@@ -2,6 +2,7 @@
 
 App.Router.map ()->
   @resource 'creatures', path: '/', ->
+    @route 'new', path: '/creatures/new'
     @resource 'creature', path: '/creatures/:id', ->
       @route 'edit'
 
