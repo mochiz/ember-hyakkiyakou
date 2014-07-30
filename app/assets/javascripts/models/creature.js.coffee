@@ -5,3 +5,6 @@ App.Creature = DS.Model.extend
   description: DS.attr('string')
   avatar: DS.attr('string')
   notes: DS.attr('string')
+  fullName: (->
+    @get('name') + '(' + @get('kana') + ')'
+  ).property('name', 'kana')
