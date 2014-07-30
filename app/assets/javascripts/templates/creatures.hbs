@@ -1,7 +1,8 @@
 <article id='creatures'>
   <h1>CREATURES {{#link-to 'creatures.new'}}NEW CREATURE{{/link-to}}</h1>
+  {{view Ember.TextField value=search placeholder='search' classNames='search'}}
   <ul>
-    {{#each creature in controller}}
+    {{#each creature in creatures}}
       {{#link-to 'creature' creature tagName='li'}}
         {{creature.fullName}}
       {{/link-to}}
