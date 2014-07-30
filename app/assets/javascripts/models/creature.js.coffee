@@ -8,3 +8,7 @@ App.Creature = DS.Model.extend
   fullName: (->
     @get('name') + '(' + @get('kana') + ')'
   ).property('name', 'kana')
+
+App.Creature.reopenClass
+  valid: (fields) ->
+    fields.name and fields.kana

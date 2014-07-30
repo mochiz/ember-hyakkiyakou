@@ -1,5 +1,5 @@
 <article id='creatures'>
-  <h1>CREATURES</h1>
+  <h1>CREATURES {{#link-to 'creatures.new'}}NEW CREATURE{{/link-to}}</h1>
   <ul>
     {{#each creature in controller}}
       {{#link-to 'creature' creature tagName='li'}}

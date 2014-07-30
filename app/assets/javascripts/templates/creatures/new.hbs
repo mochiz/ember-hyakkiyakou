@@ -1,0 +1,39 @@
+<article id="creature">
+  <h1>New Creature</h1>
+  {{#if showError}}
+    <div class="error">
+      名前とカナを入力してください。
+    </div>
+  {{/if}}
+  <form>
+    <fieldset>
+      <dl>
+        <dt>Name: </dt>
+        <dd>{{view Ember.TextField value=fields.name}}</dd>
+      </dl>
+      <dl>
+        <dt>Kana: </dt>
+        <dd>{{view Ember.TextField value=fields.kana}}</dd>
+      </dl>
+      <dl>
+        <dt>Description: </dt>
+        <dd>{{view Ember.TextArea value=fields.description}}</dd>
+      </dl>
+      <dl>
+        <dt>Wiki URL: </dt>
+        <dd>{{view Ember.TextField value=fields.wiki_url}}</dd>
+      </dl>
+      <dl>
+        <dt>Avatar: </dt>
+        <dd>{{view Ember.TextField value=fields.avatar}}</dd>
+      </dl>
+      <dl>
+        <dt>Notes: </dt>
+        <dd>{{view Ember.TextArea value=fields.notes}}</dd>
+      </dl>
+    </fieldset>
+    <fieldset class="actions">
+      <button {{action 'createCreature'}} class="save">Craete Creature</button>
+    </fieldset>
+  </form>
+</article>
