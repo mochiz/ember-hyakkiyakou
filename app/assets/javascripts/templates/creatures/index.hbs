@@ -1,0 +1,11 @@
+<article id="index">
+  <ul>
+  {{#each}}
+    <li class="thumb">
+      {{#link-to 'creature' this}}
+        <img {{bind-attr src=avatar alt=name}} />
+      {{/link-to}}
+    </li>
+  {{/each}}
+  </ul>
+</article>
