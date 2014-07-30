@@ -1,0 +1,7 @@
+<article id="creature">
+  <h1>{{model.fullName}}</h1>
+  <img {{bind-attr src=model.avatar}} />
+  <p>{{model.description}}</p>
+  <p>{{model.notes}}</p>
+  <p>Wikipedia: <a {{bind-attr href=model.wiki_url}}>{{model.name}}</a></p>
+</article>

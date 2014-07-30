@@ -2,7 +2,11 @@
   <h1>CREATURES</h1>
   <ul>
     {{#each creature in controller}}
-      <li>{{creature.fullName}}</li>
+      {{#link-to 'creature' creature tagName='li'}}
+        {{creature.fullName}}
+      {{/link-to}}
     {{/each}}
   </ul>
 </article>
+
+{{outlet}}
