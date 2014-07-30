@@ -2,7 +2,8 @@
 
 App.Router.map ()->
   @resource 'creatures', path: '/', ->
-    @resource 'creature', path: '/creatures/:id'
+    @resource 'creature', path: '/creatures/:id', ->
+      @route 'edit'
 
 App.Router.reopen
   location: 'auto'

@@ -1,0 +1,36 @@
+<article id="creature">
+  <h1>{{model.fullName}}</h1>
+
+  <form>
+    <fieldset>
+      <dl>
+        <dt>Name: </dt>
+        <dd>{{view Ember.TextField value=model.name}}</dd>
+      </dl>
+      <dl>
+        <dt>Kana: </dt>
+        <dd>{{view Ember.TextField value=model.kana}}</dd>
+      </dl>
+      <dl>
+        <dt>Description: </dt>
+        <dd>{{view Ember.TextArea value=model.description}}</dd>
+      </dl>
+      <dl>
+        <dt>Wiki URL: </dt>
+        <dd>{{view Ember.TextField value=model.wiki_url}}</dd>
+      </dl>
+      <dl>
+        <dt>Avatar: </dt>
+        <dd>{{view Ember.TextField value=model.avatar}}</dd>
+      </dl>
+      <dl>
+        <dt>Notes: </dt>
+        <dd>{{view Ember.TextArea value=model.notes}}</dd>
+      </dl>
+    </fieldset>
+    <fieldset class="actions">
+      <button {{action 'saveChanges'}} class="save">Save Changes</button>
+      <a href="#" {{action 'cancel'}} class="cancel">cancel</a>
+    </fieldset>
+  </form>
+</article>
